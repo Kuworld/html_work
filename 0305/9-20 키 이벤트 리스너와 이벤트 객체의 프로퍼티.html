@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키 이벤트</title>
+    <script>
+        /*
+        -키 이벤트 객체의 프로퍼티
+        프로퍼티               설명
+        -------------------------------------------
+        code     :     눌러진 키의 이름 저장
+        key      :     눌러진 키의 문자열 저장, 키 판별에 사용
+        altkey   :     <Alt> 키가 눌러진 상태면 true
+        ctrlkey  :     <Ctrl>키가 눌러진 상태면 true
+        shiftkey :     <Shift>키가 눌러진 상태면 true
+
+        -키 이벤트 객체의 Key 프로퍼티 값
+        ---------------------------------------------
+        키종류              key 프로퍼티에 저장되는 문자열
+        ---------------------------------------------
+        숫자, 문자, 기호 :  0~9, a~z, A~Z, !, @, #,등 기호
+        Modifier 키      : Alt, Ctrl, Shift, Numlock, Capslock등
+        Function 키      : F1 ~ F20
+        공백 키          : Enter, Tab, Spacebar 등
+        번호/ 항해 키    : 0~9, ArrowDown, ArrowUp, ArrowLeft,ArrowRight
+                            End, Home, PageDown, PageUp등
+        
+        */
+        
+        
+        
+        
+        function whatKeyDown(e){
+            let str = "";
+            let div = document.getElementById("div");
+            div.innerHTML = "";//div객체 내용 초기화
+            str += "e.key = " +e.key + "<br>";
+            str += "e.code = " + e.code + "<br>";
+            div.innerHTML = str;//div객체에 html문자열 출력
+            }
+       
+
+
+    </script>
+
+
+
+</head>
+<body>
+    <h3>키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+<hr>
+텍스트 창에 키를 눌러 보세요. Alt, Shift, Ctrl키도 가능 하답니다. <br>
+<input type="text" id="text" onkeydown="whatKeyDown(event)">
+<div id="div" style="background-color: skyblue; width: 250px; height: 50px;">
+</div>
+
+    
+</body>
+</html>

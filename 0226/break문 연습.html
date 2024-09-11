@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>break문</title>
+ </head>
+ <body>
+	<h3>1에서 얼마까지 더해야 3000을 넘는가?</h3>
+		<hr>
+
+		<script>
+		let i = 0, sum = 0;
+		while(true) {//무한반복
+							sum += i;
+							if(sum > 3000)
+							break;//합이 3000보다 큼. 반복문 벗어남
+							i++;
+		}
+		document.write(i +  "까지 더하면 3000을 넘음 : " + sum+ "<br>");
+
+
+		let i = 0, sum = 0;
+
+		do{
+			sum += i; if(sum > 3000)
+			}while(i++);break;
+			document.write(i +  "까지 더하면 3000을 넘음 : " + sum)
+		
+		
+		</script>
+ </body>
+</html>

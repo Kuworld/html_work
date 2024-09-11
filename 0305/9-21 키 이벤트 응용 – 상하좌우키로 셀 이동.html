@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    td {width: 50px; height: 50px; border: 1px solid rgb(227, 156, 43);}
+</style>
+<script>
+    let tds;
+    let prevIndex = 0, index = 0;
+    window.onload = function(){
+        tds = document.getElementsByTagName("td");
+        tds[index].style.backgroundColor = " rgb(227, 156, 43)";
+    }
+
+    window.onkeydown = function(e){
+                        /*
+                        0  1  2
+                        3  4  5
+                        6  7  8
+                        */
+        switch(e.key){
+            case "ArrowDown" :// 0/3   3/3  6/3
+                if(index/3 >= 2) return;// 6/3  맨 위 셀의 경우
+                index += 3;// 현재셀에서 3씩 증가 하면서 아래로 내려감
+                break;
+            case "ArrowUp" :// 6/3 3/3 0/3
+                if(index/3 < 1) return;// 0/3맨 아래 셀의 경우
+                index -= 3;// 현재셀에서 3씩 감소히면서 위로 올라감
+                break;
+            case "ArrowLeft" :// 2/3 1/3 0/3
+                if(index%3 == 0) return;// 0/3 맨아래 셀의 경우
+                index --;//현재셀에서 왼쪽으로 1만큼 감소하면서 왼쪽으로 감
+                break;
+            case "ArrowRight" :
+                if(index%3 == 2) return;// 맨오른쪽 셀의 경우
+                index ++;//현재셀에서 오른쪽으로 1씩 증가하면서 오른쪽으로 감
+                break;
+        }
+        //현재 위치의 셀을 원하는 색으로 표시
+        tds[index].style.backgroundColor= " rgb(227, 156, 43)";
+        //이전 위치의 셀을 휜색으로표시
+        tds[prevIndex].style.backgroundColor= "white";
+        prevIndex = index;//현재 위치를 이전 위치로 변경
+
+    }
+
+</script>
+
+</head>
+<body>
+    <h3>화살표 키로 셀 위로 이동하기</h3>
+    <hr>
+    <table>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td></tr>
+    </table>
+</body>
+</html>
+

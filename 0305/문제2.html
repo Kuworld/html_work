@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function drawImage(){
+            let f = null;
+            let ch = document.getElementsByName("fruit");
+            let img = document.getElementById("fruitImg");
+          for(let i = 0 ; i < ch.length; i++){
+            if(ch[i].checked == true){
+                f = ch[i];
+            }
+          }
+        img.src = f.value;
+        }
+
+    </script>
+</head>
+<body>
+    <h3>라디오 버튼을 클릭하면 이미지를 출력 합니다.</h3>
+<hr>
+    <forms>
+        <input type="radio" name="fruit" onclick="drawImage()" value="../image/banana.png" ><label for="">바나나</label>
+        <input type="radio" name="fruit" onclick="drawImage()" value="../image/mango.png" checked  ><label for="">망고</label>
+        <input type="radio" name="fruit" onclick="drawImage()" value="../image/apple.png" ><label for="">사과</label>
+        <img id="fruitImg" src="../image/mango.png" alt="">
+    </form>
+        
+
+
+
+
+</body>
+    </html>

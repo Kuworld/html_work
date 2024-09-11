@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Math객체(수학에 관계된 객체)
+        Math.max(숫자,숫자) : 숫자중에 큰값 가져올때
+        Math.min(숫자,숫자) : 숫자중에 작은값 가져올때
+        Math.round(숫자)    : 소수점 첫째자리에서 반올림(5이상) 
+        Math.ceil(숫자)     :소수점 자리를 무조건 올림
+        Math.floor(숫자)    : 소수점 자리를 무조건 절삭(버림)
+        Math.abs(숫자)      : 절대값
+        Math.sqrt(숫자)     : 숫자의 제곱근 구하기
+        random(숫자)        : 0과 1사이의 난수를 발생(추첨,복권,경품)
+        
+        
+    -->
+    <script>
+        let maxNum = Math.max(30,70,2,50);
+            document.write("최대값" + maxNum);
+            let ranNum = Math.random();//0~1사이의 난수, 무작위 수 구하기
+
+            document.write("<br/>0-1사이의 난수 : " + ranNum);
+
+            //무작위수 = Math.floor(Math.random()*(큰수-작은수+1)+시작값==(구간,나타낼 갯수)+시작값
+            document.write("<hr/>");
+            let imgNum=Math.floor(Math.random()*3)+1// floor정수미만 버림.
+            console.log("선택된 수 : " + imgNum);
+            document.write("<img src = '../image/img" + imgNum + ".jpg' alt='랜덤이미지'/>")
+
+    </script>
+        
+
+
+
+</body>
+</html>

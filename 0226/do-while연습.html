@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>do-while문 </title>
+ </head>
+ <body>
+  <h3>do-while문으로 0에서 n까지 합 구하기</h3>
+	<hr>
+		
+		<script>
+			let n = prompt("0보다 큰 정수를 입력하세요",0);
+			n = parseInt(n)
+
+			let i = 0, sum = 0;
+			do{
+			sum += i;
+			i++;
+			
+			} 
+			while(i<=n);
+			document.write(i+"<br>")
+			document.write("0에서 " + n + "까지 합은 " + sum+"<br>");
+
+			
+
+			/*for(시작값 = 초기값; 조건 = 끝나는 값; 증감값){반복 실행문}
+
+			--while(조건){참인경우 처리할 문장}
+				:조건이 만족하ㅣ 않으면 한번도 수행 안함*/
+
+		
+		
+		</script>
+ 
+ 
+ </body>
+</html>

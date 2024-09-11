@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>switch로 커피주문</title>
+ </head>
+ <body>
+	<h3> switch로 커피주문</h3>
+
+
+<hr>
+
+<script>
+let price = 0;
+let coffee = prompt("무슨커피를 드릴까요?","");
+/*switch(coffee){
+   case"espresso" :
+	case"에스프레소" : price = 2000; break;
+	
+	case"카푸치노" :
+	case"cappuccino" : price = 3000; break;
+
+	case"카페라떼" :
+	case"cafelatte" : price = 3500; break;
+
+	default : 
+		  document.write(coffee + "는 없습니다.");
+	}
+
+	if(price != 0)
+		  document.write(coffee + "는 " +  price + "원입니다.");}*/
+
+	if(coffee=="espresso" ||coffee=="에스프레소" )
+		price = 2000;
+	
+	else if(coffee =="카푸치노")
+		price = 3000;
+	else if(coffee =="카페라떼")
+		price = 3500;
+
+	else
+        document.write( coffee + "없는 음료입니다.");
+		  
+
+
+		if(price != 0)
+		  document.write(coffee + "는 " +  price + "원입니다.");
+
+		
+			
+		
+
+
+
+
+
+</script>
+ </body>
+</html>

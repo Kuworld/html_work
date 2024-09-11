@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{display: inline-block; border: 2px solid red; background-color: rgb(243, 255, 105);}
+
+    </style>
+</head>
+<body onload="load()">
+    <h3>div 태그에 시계만들기</h3>
+    <hr>
+    <div id="div"> </div>
+    <script>
+        function load(){
+            let d = new Date().toLocaleTimeString();
+            document.getElementById("div").innerHTML = d;
+            setTimeout("load()",0);
+        }
+
+    </script>
+</body>
+</html>

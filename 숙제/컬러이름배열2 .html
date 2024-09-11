@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <div id = "">
+
+    </div>
+    <script>
+         function newColor() {
+
+        let r = Math.floor(Math.random()*256);
+
+        let g = Math.floor(Math.random()*256);
+
+        let b = Math.floor(Math.random()*256);
+
+        return "rgb(" + r + "," + g + "," + b + ")";
+
+        }
+   
+           
+           console.log(rgb);               
+         for(let i = 0; i < 16; i++){
+            var rgb = newColor();
+            document.write("<div style ='text-align:center;padding:10px;display:inline-block; width:100px; height:40px;margin:0; border:none; background-color:"+ rgb +"'>");  
+            document.write(rgb);
+            document.write("</div>");
+
+                 }
+
+                 console.log(rgb);     
+              
+
+    </script>
+</body>
+</html>
+   

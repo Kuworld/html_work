@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>비트연산</title>
+	<script>
+			function digit8(v) {
+												console.log(v)
+												var str ="";
+												//for(초기값; 조건;증감값){반복처리할문;}
+												for(let i = 0; i < 8; i++, v <<=1){if((v & 0x80)) str += "1";
+												else str += "0";}
+												return str;	
+													}
+		//function 함수명(매개변수){처리내용; return 값;}
+		// 호출 : 리터값을 받는 변수명= 함수명(값);
+	</script>
+
+ </head>
+ <body>
+  <!--&삭제 목적
+  -			| 합치는(ADD) 목적
+			-->
+			<h3>비트논리 연산과 시프트 연산</h3>
+				<hr>
+					<script>
+						let x=10, y=3;
+						document.write('<pre>');
+						document.write('x=' + x + ',y = ' + y+ '<br>');
+						document.write('x :                      '  + digit8(x) + '<br>');
+						document.write('y :                      '  + digit8(y) + '<br>');
+						document.write('<hr>');
+						document.write('x & y :               ' + digit8(x&y) + '<br>');
+						document.write('x | y :                ' + digit8(x|y) + '<br>');
+						document.write('x ^ y :                ' + digit8(x^y) + '<br>');
+						document.write('~x     :                ' + digit8(~x) + '<br>');
+						document.write('<hr>');
+						document.write('x<< 1 :               '+ digit8(x<<1) + ' (' + (x<<1) + ')<br>' );
+						document.write('x>> 1 :               '+ digit8(x>>1) + ' (' + (x>>1) + ')<br>' );
+						document.write('x>>> 1 :             '+ digit8(x>>>1) + ' (' + (x>>>1) + ')<br>' );
+						document.write('</pre>');
+					
+					</script>
+
+
+ </body>
+</html>

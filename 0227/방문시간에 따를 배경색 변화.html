@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방문 시간에 따라 변하는 배경색</title>
+</head>
+<body>
+    <h3>방문 시간에 따라 변하는 배경색</h3>
+    <hr>
+
+    <script>
+        let n = 0;//전역변수
+        function a(){
+            n++;
+            if(n==50) clearInterval(s);//n이 50이 되면 반복을 중지 해라
+        let current = new Date();//현재 시간을 가진 데이터 객체
+
+        if(current.getSeconds()% 2 == 0)
+            document.body.style.backgroundColor = "violet";//CSS형식
+        else
+        document.body.style.backgroundColor = "lightblue";
+    
+    
+        document.write("현재시간 : " );
+        document.write(current.getHours(),"시");
+        document.write(current.getMinutes(),"분");
+        document.write(current.getSeconds(),"초<br>");
+
+     }
+     let s = setInterval(a,1000);
+    
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

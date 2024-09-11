@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>문자배열 다루기</h3>
+    <hr>
+    <script>
+        let names = new Array("wonsun","jaemoonlee","kitae","gracehwang");
+        document.write("이름 : ")
+        for(i=0; i< names.length; i++){
+            document.write(names[i]+" ");
+        }
+        document.write("<br>")
+        document.write("가장 긴 이름 : ")
+        let max = 0;
+        for(let i = 0;i < names.length;i++){
+            strl = names[i]
+            if(max<strl){
+                max = names[i];
+            }
+        } 
+         
+                
+        document.write(max)
+    </script>
+    
+</body>
+</html>

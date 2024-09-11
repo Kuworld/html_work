@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 문서 작성기 만들기</title>
+    <script>
+       /*
+       창이름.document --> (windows의 자식)지정한 창의 문서를 의미함
+       window.close() --> 전체창(windows)를 의미
+       창이름.document.close() --> 현재창의 문서 닫기 의미
+
+       창이름.document.write(요소); -->현재 열려 있는(자식)창에 출력한다
+       .document.write(요소); -->창이름이 생략 되면 전체창(windows)을 의미
+       */
+       
+       
+       let win = null;//초기화, 보통 객체를 초기화 할때 사용.
+        function showHTML(){
+            if(win == null||win.closed)
+                win = window.open("","outWin", "width= 300,height=200");
+
+                let textarea = document.getElementById("srcText")
+                win.document.open();//생략가능
+                win.document.write(textarea.value);
+                win.document.close();//창을 닫는 것은 아님 반환의 의미,
+ }
+
+           
+       
+
+    </script>
+
+
+
+</head>
+<body>
+<h3>HTML문서 작성기 만들기</h3>
+<hr>
+<p>
+    아래에 HTML 문서를 작성 하고 버튼을 클릭해 보세요
+  
+
+
+</p>
+<textarea id="srcText" cols="10" rows="10"></textarea>
+<br>
+<br>
+<button onclick="showHTML()">HTML문서 출력하기</button><button onclick="javascript:self.close()">닫아 주세요</button>
+    
+</body>
+</html>
+<!--<html>
+<head>
+<title>테스트 문서</title>
+</head>
+<body>
+<h2>안녕하세요</h2>
+<hr>
+문서 만들기 성공했어요.<br>
+축하해 주세요.
+<button onclick="javascript:self.close()">닫아 주세요</button>
+</body>
+
+
+</html>-->

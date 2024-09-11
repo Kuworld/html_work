@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  
+  <title>Document</title>
+	
+ </head>
+ <body>
+  <script>
+	let t;
+	let loc = ""; 
+	A : while(true){
+	 loc = prompt("지역번호 입력","")
+	 let t= "";	
+	switch(loc){
+			case"서울" : t = "02"  ; break;
+			case"부산" : t = "052" ; break;
+			case"경기" : t = "031" ; break;
+			case"그만" : break A;
+			default: 
+				t = "서울, 부산, 경기 이외지역";
+			}
+			alert(loc + "은 지역번호가 " + t +"입니다 ");
+	}
+	document.wrtie("그만...");
+		
+	
+		</script> 
+ </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        function cusor(){
+            document.onmousemove = function(e){
+                let div = document.getElementById("div");
+                div.style.left = event.clientX + "px";
+                div.style.top = event.clientY + "px";
+
+            }
+        }
+
+    </script>
+</head>
+<body onload="cusor()">
+    <h3>이미지 커서 만들기</h3>
+    <hr>
+    <p id = "p">마우스를 움직이면 이미지로 마는 마우스 커서가 마우스를 따라 다닙니다 </p>
+<div id="div" style="position: absolute;"><img src="../image/spongebob.png" width="30px" height="30px"></img></div>
+</body>
+</html>

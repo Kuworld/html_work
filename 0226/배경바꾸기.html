@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ <style>
+	.box{width:500px;height:500px;background-color:;}
+ </style>
+ <script>
+ 
+ </script>
+ 
+ </head>
+ <body>
+ <div class="box">여기에 마우스를 올려 보세요<br> 여기에 마우스를 올리면 배경이 노란색으로 변합니다</div>
+  <script>
+            document.querySelector(".box").addEventListener("mousedown",function(){
+            document.querySelector(".box").style.backgroundColor = "yellow";});
+	        document.querySelector(".box").addEventListener("mouseup",function(){
+            document.querySelector(".box").style.backgroundColor = "white";});
+
+
+
+		
+		</script>
+
+
+ </body>
+</html>
+  

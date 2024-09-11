@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체 전달 받기</title>
+</head>
+<body>
+<p id="p"> 이곤에 마우스를 올려 보세요</p>
+<button onclick="f(event)">클릭하세요</button> 
+<!--event예약어, 강제로 발생시킬때는 꼭 예약어 event를 사용해야 함ㄴ-->>
+<script>
+    function f(e){// e는 현재 발생한 이벤트 객체
+        alert(e.type);//이벤트 종류
+        console.log(e);
+    }
+    document.getElementById("p").onmouseover = f;
+</script>   
+</body>
+</html>

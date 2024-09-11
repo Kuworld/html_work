@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h3>난수 10개 생성</h3>
+<hr>
+<script>
+    let ranNum = []; let max= 0;
+    document.write("<hr>");
+    for (i=0; i<10; i++) {
+        aa = Math.floor(Math.random() * 100+1);
+        ranNum[i] = aa;
+        if(max<ranNum[i]) {max= ranNum[i];}
+        
+        document.write(ranNum[i]+" ");
+        
+    }
+
+    document.write("<hr>");
+    document.write("제일 큰 수는 " + max);  
+    document.write("<hr>");
+    ranNum.sort();
+    for (i=0; i<10; i++) {
+        
+        document.write(ranNum[i]+" ");
+    }
+   
+
+
+
+
+
+    
+   
+
+
+       
+
+
+    </script>    
+</body>
+</html>

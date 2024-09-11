@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>형식을 가진 텍스트 입력</title>
+ </head>
+ <body>
+ <h3>회원 정보를 입력해주세요.</h3>
+ <hr>
+  <form>
+		<!--email 기본적으로 브라우저에서 유효성 검사함-->
+		email : <input type="email" placeholder="ID@host" required><br>	
+		<!--url 기본적으로 브라우저에서 유효성 검사함-->
+		홈페이지 : <input type="url" placeholder="http://"required><br>
+		<!--브라우저에서 검사X pattern 속성을 이용해 유효성 검사를 함-->
+		전화번호 : <input type="tel" placeholder="010-0000-0000" pattern="\d{3}-\d{3,4}-\d{4}" title="휴대폰 번호는 3자리의 숫자-3자리에서 4자리숫자-4자리 숫자로 입력하시오"required><br>
+			<input type="submit" value="확인"><br><br>
+
+<hr>
+		검색어 : <input type="search" placeholder="검색어"> 
+				<input type="button" value="검색">
+		</form>
+		<hr>
+		<h3>회원정보를 입력해주세요</h3>
+		<hr>
+			<form>
+				<fieldset>
+					<legend>회원정보</legend>
+					이메일 : <input type="email" minlength="5" maxlength="10"><br>
+					홈페이지 : <input type="url"><br>
+					전화번호 : <input type="tel"><br>
+				</fieldset>
+				<small> 질문: TEL. 010-000-0000</small>
+			</form>
+		<hr>
+			<select>
+			<optgroup label="공과대학">
+				<option value="history"> 사회과</option>
+
+
+				</optgroup>
+				</select>
+
+
+
+
+
+ </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <style>
+		.subm{display:block; /*블록 요소로 변경*/
+		background-color:#fff
+		border:1px solid #decade;
+		cursor:pointer;/*손가락 모양*/
+		padding:5px 10px 6px 7px;/*컨텐츠와의 간격*/
+		}
+		.subm img{/*이미지 테두리 없고 넓이, 높이*/border:0; padding:0; width:16px; height:16px}
+		.subm:hover{/*마우스 오버시*/background-color:#e6efc2; border:1px solid #c6d880; color:#529315}
+
+
+  </style>
+
+  <title>Document</title>
+ </head>
+ <form>
+ <body>
+	
+	<button type="submit" class="subm">전송하기
+		<img src="../image/button.png" alt="">
+	</button>
+</form>
+
+<hr>
+	<form oninput="result.value=parselnt(num1.value)+parselnt(num2.value)">
+		<input type="number" name="num1" value="0">-
+		<input type="number" name="num2" value="0">=
+		<output name="result" for="num"></output>
+	<!-- <output> : 계산결과를 브라우저에 표시-->
+	</form>
+
+
+ </body>
+</html>

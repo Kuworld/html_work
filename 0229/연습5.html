@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>zIndex 스타일 프로퍼티</h3>
+    <hr>
+    <div>
+        <img src="../img/spade-A.png" width="100" height="140"alt="스페이드A">
+        <img src="../img/spade-2.png" width="100" height="140"alt="스페이드2">
+        <img src="../img/spade-3.png" width="100" height="140"alt="스페이드3">
+        <img src="../img/spade-7.png" width="100" height="140"alt="스페이드7">
+    </div>
+<script>
+    let imgArray = document.getElementsByTagName('img');
+        for(let i = 0; i < imgArray.length; i++){
+            let obj = imgArray[i];
+            obj.style.zIndex = i;
+            obj.style.left = "10px";
+            obj.style.top = "20px";
+
+
+            obj.onclick = shuffle;
+ }
+    function shuffle(){
+        for(let i = 0 ; i < imgArray.length; i++)
+    }
+       
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>함수</title>
+	<script>
+	function adder(a, b) {
+										let sum;
+										sum = a + b;
+										return sum;
+										} 
+	function result1(a,b){
+									alert("a=" + a + "\n b =" + b);
+	}
+	function result2(a,b){
+									alert("값 받지 않았고, 돌려줄 값도 없음.");
+	}
+	function result3(a,b){
+									alert("값 받지 않았고, 돌려줄값 있음.");
+									return "나 들어 간다 받아라";
+	}
+  </script>
+ </head>
+ <body>
+	<h3>함수 adder()</h3>
+
+	<hr>
+
+	<script>	
+		let n = adder(24567,98374);
+		document.write("24567 + 98374는 " + n + "<br>");
+		result1(100,200);//리턴값 없음
+		result2();//인자값 없음, 리턴값 없음
+		 let c = result3();//인자값 없고, 리턴값 있음
+		 alert(c);
+		 console.log("c= " + c);
+	</script>	
+
+
+ </body>
+</html>

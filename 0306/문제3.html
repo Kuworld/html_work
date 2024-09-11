@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>옵션 선택으로 사이트 접속 </title>
+    <script>
+        function load(){
+            let select = document.getElementById("site");
+           // window.open("select.options[select.selectedIndex].value","_blank","width=500,height=500");
+            let val = select.options[select.selectedIndex].value;
+            //if(val != "x"){
+                window.open(val,"_balnk","width=100,height=100")
+            //}
+        }
+
+
+    </script>
+</head>
+<body>
+    <h3>옵션 선택으로 사이트 접속</h3>
+
+    옵션 선택 마다 새 윈도우에 접속합니다.
+    <hr>
+    접속할 사이트
+    <select name="" id="site" onchange="load()">
+        
+        <option value="http://www.naver.com">네이버</option>
+        <option value="x" selected>x</option>
+        <option value="http://www.google.com" >구글</option>
+        <option value="http://www.daum.net">다음</option>
+    </select>
+    <!--<button onclick="load()">가자</button>
+    -->
+</body>
+</html>

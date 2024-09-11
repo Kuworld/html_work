@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<script>	
+		function printStar(n){
+			let m = parseInt(n);
+			if(isNaN(m) || m <1){document.write("잘못 입력하셨습니다.")}
+			
+			
+			for (let i = 1;i <= m ; i++){
+				for(let j=1;j<=i; j++)
+				{document.write("*")};
+			document.write("<br>")
+			}
+		}
+			
+			
+
+	
+	</script>	
+
+ </head>
+ <body>
+  <script>
+  let n = prompt("숫자 입력 해",0);
+	printStar(n);
+</script>
+ </body>
+</html>
